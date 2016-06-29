@@ -11,6 +11,7 @@ A presentation by [Tyler Machado](http://www.tylermachado.com/) at [CASCADE BOS]
 	- went with a circle-based chart type to fit in squares, which work well on both landscape and portrait orientations
 	- that single chart type meant only very minor styling changes were necessary for different screen sizes
 	- custom chart type idea sketched out during meeting with editor, developer and designer
+
 - [The Decline of Yahoo in Its Own Words](https://hbr.org/2016/06/the-decline-of-yahoo-in-its-own-words), Harvard Business Review
 	- traditional line chart on large screens, vertical heatmap on small screens
 	- two different chart types meant more coding work, though in this case we felt it was worth it because each chart is very successful in its context
@@ -20,10 +21,23 @@ A presentation by [Tyler Machado](http://www.tylermachado.com/) at [CASCADE BOS]
 ## Other examples
 - [Where AirAsia Flight 8501 Was Lost and Debris Found](http://www.nytimes.com/interactive/2014/12/28/world/asia/airasia-flight-qz8501-map.html?_r=0), The New York Times
 	- map crops and copy changes at smaller sizes
+
 - [How earbuds can wreck your hearing (especially for young people)](http://www.chicagotribune.com/news/ct-earphones-could-be-hurting-your-ears-20160229-htmlstory.html), Chicago Tribune
 	- radically different chart type at different screen sizes
 	- some copy omitted at smaller sizes
+
 - [2015 Women's World Cup Predictions](http://projects.fivethirtyeight.com/womens-world-cup/), FiveThirtyEight
 	- different entry point on mobile; considers what information looks best when you first arrive on different devices
+
 - [The Urban Neighborhood Wal-Mart: A Blessing Or A Curse?](http://www.npr.org/2015/04/01/396757476/the-neighborhood-wal-mart-a-blessing-or-a-curse), NPR
 	- small multiples on large screens, animated GIFs on small screens
+
+## Resources
+- [MobileVis](http://mobilev.is/) - examples of great data visualizations on mobile devices
+- [Dataviz for All](https://github.com/julia67/data-viz-for-all) - resources and best practices from a 2015 [SRCCON](http://srccon.org) session
+- [Dataviz for Everyone](https://github.com/eyeseast/responsive-dataviz) - slide decks from a 2014 NICAR session
+- [At the Malofiej Infographics World Summit, “the best form of storytelling is often static”](http://www.niemanlab.org/2016/03/at-the-malofiej-infographics-world-summit-the-best-form-of-storytelling-is-often-static/) - Nieman Lab post on best practices for mobile chart and interactive design
+
+## Tools
+- [ai2html](http://ai2html.org/) - converts Illustrator files into responsive-friendly HTML and CSS, ready to drop into a web page
+- [Pym.js](http://blog.apps.npr.org/pym.js/) - Javascript library that allows for iframes that responsively adjust width and height
