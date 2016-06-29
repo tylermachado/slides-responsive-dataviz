@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Responsive Design And Dataviz</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section class="firstslide">
+					<h1>Responsive Design And Dataviz</h1>
+					<hr>
+					<h3>Tyler Machado, hbr.org</h3>
+					<h5>@tylermachado / tylermachado.com</h5>
+
+					<aside class="notes">
+						hey what's up i'm the editorial web dev at HBR<br>
+						work on interactives and dataviz with our editors
+					</aside>
+				</section>
+
+				<section>
+					<h2 class="fragment">principles of mobile dataviz</h2>
+					<ul>
+						<li class="fragment">limited real estate</li>
+						<li class="fragment">vertical orientation</li>
+						<li class="fragment">touch/hover events are difficult</li>
+					</ul>
+
+					<aside class="notes">
+						there's no good or bad, just context
+					</aside>
+				</section>
+
+				<section>
+					<a href="https://hbr.org/2016/04/how-corporate-boards-connect-in-charts"><img src="img/interlocks-web.png"></a>
+
+					<aside class="notes">
+						original prototype by Scott was dense, horizontal layout<br>
+						brainstormed with designers for ideas<br>
+						sketch by Laura: square design fits nicely into any size
+					</aside>
+				</section>
+
+				<section>
+					<h3>(print version)</h3>
+					<a href="https://hbr.org/2016/04/how-corporate-boards-connect-in-charts"><img src="img/interlocks-print.jpg" style="width:80%"></a>
+
+					<aside class="notes">
+						it actually works here!<br>
+						you could imagine a video as well
+					</aside>
+				</section>
+
+				<section>
+					<a href="https://hbr.org/2016/06/the-decline-of-yahoo-in-its-own-words"><img src="img/mobile.png"></a>
+
+					<aside class="notes">
+						started with line, sketched out heatmap<br>
+						takes advantage of vertical scroll<br>
+						annotations don't hide info<br>
+						re-renders on width -- more effort to implement
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://www.nytimes.com/interactive/2014/12/28/world/asia/airasia-flight-qz8501-map.html"><img src="img/airasia.png"></a>
+
+					<aside class="notes">
+						subtle differences to account for space<br>
+						ai2html
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://www.chicagotribune.com/news/ct-earphones-could-be-hurting-your-ears-20160229-htmlstory.html"><img src="img/earbuds.png"></a>
+
+					<aside class="notes">
+						radically different chart type
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://projects.fivethirtyeight.com/womens-world-cup/ "><img src="img/worldcup.png"></a>
+
+					<aside class="notes">
+						streamlines the necessary info
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://www.npr.org/2015/04/01/396757476/the-neighborhood-wal-mart-a-blessing-or-a-curse"><img src="img/walmart.png"></a>
+
+					<aside class="notes">
+						small multiples on desktop<br>
+						animated GIFs on mobile
+					</aside>
+				</section>
+
+				<section>
+					<h3>AI2HTML</h3>
+					<img src="img/res-ai2html.png">
+
+					<aside class="notes">
+						developed by New York Times<br>
+						turns Illustrator documents into HTML and CSS<br>
+						includes custom script for responsiveness
+					</aside>
+				</section>
+
+				<section>
+					<h3>Pym.js</h3>
+					<video width="640" height="480" controls>
+						<source src="img/pym.mp4" type="video/mp4">
+					</video>
+
+					<aside class="notes">
+						Javascript library developed by NPR<br>
+						make iframes responsive
+					</aside>
+				</section>
+
+				<section>
+					<h3>Javascript : D3.js</h3>
+				    <pre><code data-trim data-noescape>
+function render() {
+	d3.select("#chartcontainer").selectAll("*").remove();
+	width = window.innerWidth;
+	console.log(window.innerWidth);
+	if (window.innerWidth > 768) {
+		drawLineChart();
+		pymChild.sendHeight();
+	} else {
+		drawHeatmap();
+		pymChild.sendHeight();
+	}
+}
+
+render();
+
+window.onresize = render;
+				    </code></pre>
+				</section>
+
+				<section>
+					<h3>thanks, here's a chill dog pic</h3>
+					<img src="img/dog.jpg" style="width:60%">
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
