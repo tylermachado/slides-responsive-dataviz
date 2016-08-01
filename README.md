@@ -4,7 +4,7 @@ A presentation by [Tyler Machado](http://www.tylermachado.com/) at [CASCADE BOS]
 
 ## The slides
 
-[Here are the slides!](http://tylermachado.github.io/responsive-design-and-dataviz/#/) I don't know if they will make sense without me rambling next to them but that's okay!
+[Here are the slides!](http://www.tylermachado.com/slides-responsive-dataviz/#/) I don't know if they will make sense without me rambling next to them but that's okay!
 
 ## What we've done at HBR
 - [How Corporate Boards Connect, in Charts](https://hbr.org/2016/04/how-corporate-boards-connect-in-charts), Harvard Business Review
